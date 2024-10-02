@@ -1,0 +1,2 @@
+#!/bin/bash
+for file in $(find . -type f -empty -o -type d -empty); do echo "${file#./}"; done
