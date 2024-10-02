@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in $(find . -type f -empty -o -type d -empty); do echo "${file#./}"; done
+find . -type f -empty -print -o -type d -empty -print | while read -r file do    echo "${file#./}" done
