@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello $(printf '%-7s' $(whoami))"
+echo "hello $(printf '%-6s' $(whoami))"
