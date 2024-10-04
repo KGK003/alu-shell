@@ -1,2 +1,2 @@
 #!/bin/bash
-ls | sort -t'-' -k1,1n -k2,2
+cat | head -n -1 | nl -s' ' | grep -E '^[0-9]+[13579] ' | cut -f2-
