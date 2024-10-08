@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #the file reader  
-while IFS=: read -r username x user_id group_id comment home_directory shell
+while IFS=: read -r username _ user_id _  _ home_directory _
 do
     echo "Username: $username"
     echo "User ID: $user_id"
