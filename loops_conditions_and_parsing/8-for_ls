@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#displayin list formatt
+for file in $(ls -1 | grep -v '^\..*'); do
+name_after_dash=$(echo $file | cut -d'-' -f2-)
+if [ -n "$name_after_dash" ]; then
+        echo "$name_after_dash"
+    fi
+done
