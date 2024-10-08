@@ -14,9 +14,7 @@ case $count in
         17)
             echo "bad luck from Italy"
             ;;
-        *)
-echo $count
-;;
+        
 esac
 ((count++))
 done
