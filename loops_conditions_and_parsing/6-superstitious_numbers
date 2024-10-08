@@ -5,7 +5,7 @@ while [ $count -le 20 ]
 do
 case $count in
         4)
-            echo " Bad luck from China"
+            echo "Bad luck from China"
             ;;
         9)
             echo "Bad luck from Japan"
