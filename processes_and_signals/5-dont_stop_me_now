@@ -3,8 +3,6 @@
 pid=$(pgrep 4-to_infinity_and_beyond)
 
 if [ -n "$pid" ]; then
-  kill "$pid"
+  kill -9 "$pid"
   echo "0 One or more processes matched the criteria"
-else
-  echo "1 No processes matched"
 fi
