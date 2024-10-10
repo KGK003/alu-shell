@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#indefinety
+trap 'echo "I am invincible!!!"; exit 0' SIGTERM
+while true; do
+  echo "To infinity and beyond indefinitely"
+  sleep 2
+done &
+pid=$(pgrep 7-highlander)
+if [ -n "$pid" ]; then
+  echo "$pid" > /proc/$pid/task/$pid/comm
+  echo "0 One or more processes matched the criteria"
+fi
