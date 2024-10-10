@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 #killing process
-kill $(pgrep 4-to_infinity_and_beyond)
+pid=$(pgrep 4-to_infinity_and_beyond)
+
+if [ -n "$pid" ]; then
+  kill "$pid"
+  echo "0 One or more processes matched the criteria"
+else
+  echo "1 No processes matched"
+fi
