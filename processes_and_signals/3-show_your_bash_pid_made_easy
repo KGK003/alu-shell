@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#the fourth
+for pid in /proc/[0-9]*; do
+  cmdline=$(cat "$pid/cmdline" 2>/dev/null)
+  if [[ "$cmdline" == *bash* ]]; then
+    echo "PID: ${pid##*/}, Process: $cmdline"
+  fi
+done
