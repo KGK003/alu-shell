@@ -1,8 +1,3 @@
 #!/usr/bin/env bash
-#infinity
-pid=$(pgrep 4-to_infinity_and_beyond)
-
-if [ -n "$pid" ]; then
-  echo "9" > /proc/$pid/task/$pid/comm
-  echo "0 One or more processes matched the criteria"
-fi
+#infinity and beyond stoped
+pkill -f 4-to_infinity_and_beyond
