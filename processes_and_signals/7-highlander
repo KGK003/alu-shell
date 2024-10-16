@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 #hihlander killed
-pgrep -f 7-highlander | xargs kill -9
+trap "echo Iam invincible!!!" SIGTERM
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
