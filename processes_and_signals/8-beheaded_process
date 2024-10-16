@@ -1,9 +1,3 @@
 #!/usr/bin/env bash
-#still killing
-pid=$(pgrep 7-highlander)
-if [ -n "$pid" ]; then
-  echo "Killing process $pid (7-highlander)"
-  echo "9" > /proc/$pid/attr/current
-else
-  echo "No 7-highlander process found"
-fi
+#still killing 7-highlander
+pgrep -f 7-highlander | xargs kill -9
